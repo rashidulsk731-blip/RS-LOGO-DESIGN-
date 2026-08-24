@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AYMALOKOR BUSINESS | Professional Services</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#080b12;
+  color:#fff;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.container{
+  width:92%;
+  max-width:1150px;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(8,11,18,.95);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #292e3a;
+}
+
+.nav{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-size:20px;
+  font-weight:800;
+}
+
+.brand span{
+  color:#e0bd65;
+}
+
+.menu{
+  display:flex;
+  gap:22px;
+  font-size:13px;
+}
+
+.menu a:hover{
+  color:#e0bd65;
+}
+
+/* HERO */
+
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 80% 20%,#46371b 0,transparent 30%),
+    radial-gradient(circle at 10% 80%,#17253e 0,transparent 35%),
+    linear-gradient(135deg,#080b12,#111625);
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:45px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  border:1px solid #b99a50;
+  color:#e1c16f;
+  border-radius:30px;
+  padding:8px 15px;
+  font-size:11px;
+  letter-spacing:1px;
+}
+
+.hero h1{
+  font-size:58px;
+  line-height:1.05;
+  margin:20px 0;
+}
+
+.gold{
+  color:#e1bf69;
+}
+
+.hero p{
+  color:#aeb5c3;
+  max-width:600px;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:14px 21px;
+  border-radius:11px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.btn-gold{
+  background:#dfbd67;
+  color:#111;
+}
+
+.btn-dark{
+  border:1px solid #454b59;
+  background:#111622;
+}
+
+.hero-card{
+  background:linear-gradient(145deg,#161b29,#0d1018);
+  border:1px solid #3b3e49;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:0 25px 70px #0008;
+}
+
+.hero-logo{
+  height:330px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle,#3d3018,transparent 50%),
+    #090c13;
+}
+
+.hero-icon{
+  font-size:85px;
+  color:#e0bc62;
+}
+
+.hero-logo h2{
+  letter-spacing:5px;
+}
+
+/* SECTIONS */
+
+section{
+  padding:75px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:34px;
+}
+
+.section-title p{
+  color:#9da5b4;
+  margin-top:7px;
+}
+
+/* ABOUT */
+
+.about{
+  background:#0d1018;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.info-card{
+  padding:25px;
+  border:1px solid #2d3340;
+  border-radius:18px;
+  background:#121722;
+}
+
+.info-card h3{
+  color:#dfbd67;
+  margin-bottom:10px;
+}
+
+.info-card p{
+  color:#9da5b5;
+  font-size:14px;
+}
+
+/* SERVICES */
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.service{
+  padding:24px;
+  border:1px solid #2c3240;
+  border-radius:18px;
+  background:#111521;
+  transition:.25s;
+}
+
+.service:hover{
+  transform:translateY(-5px);
+  border-color:#c7a650;
+}
+
+.service-icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.service h3{
+  color:#e0bd69;
+}
+
+.service p{
+  color:#969eae;
+  font-size:13px;
+  margin-top:6px;
+}
+
+/* STAFF */
+
+.staff{
+  background:#0d1018;
+}
+
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.staff-card{
+  padding:20px;
+  text-align:center;
+  border:1px solid #2d3340;
+  border-radius:17px;
+  background:#131722;
+}
+
+.avatar{
+  width:65px;
+  height:65px;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#25202e;
+  color:#dfbd67;
+  font-size:28px;
+}
+
+.staff-card h3{
+  margin-top:10px;
+}
+
+.staff-card p{
+  color:#9098a7;
+  font-size:12px;
+}
+
+/* PACKAGES */
+
+.package-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.package{
+  position:relative;
+  padding:23px;
+  border:1px solid #303644;
+  border-radius:18px;
+  background:#111521;
+}
+
+.package.popular{
+  border-color:#d9b761;
+}
+
+.badge-popular{
+  position:absolute;
+  top:12px;
+  right:10px;
+  background:#d9b761;
+  color:#111;
+  font-size:9px;
+  padding:5px 7px;
+  border-radius:20px;
+}
+
+.package h3{
+  color:#e1bf68;
+}
+
+.price{
+  font-size:31px;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+.package ul{
+  list-style:none;
+  color:#a3aab8;
+  font-size:12px;
+}
+
+.package li{
+  margin:7px 0;
+}
+
+/* CUSTOMER FORM */
+
+.form-section{
+  background:#0d1018;
+}
+
+.form-card{
+  max-width:900px;
+  margin:auto;
+  padding:28px;
+  border:1px solid #323746;
+  border-radius:23px;
+  background:#111622;
+  box-shadow:0 20px 60px #0006;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+label{
+  display:block;
+  color:#b8bfcb;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #343a49;
+  border-radius:10px;
+  background:#0b0f17;
+  color:white;
+  outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+  border-color:#d0ad58;
+}
+
+textarea{
+  min-height:90px;
+  resize:vertical;
+}
+
+.form-note{
+  margin:18px 0;
+  padding:14px;
+  background:#181c27;
+  border-radius:11px;
+  color:#929bab;
+  font-size:12px;
+}
+
+.submit{
+  width:100%;
+  border:0;
+  padding:16px;
+  border-radius:11px;
+  background:#dabb65;
+  color:#111;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* PAYMENT */
+
+.payment{
+  background:#080b12;
+}
+
+.payment-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.pay-card{
+  padding:25px;
+  background:#121722;
+  border:1px solid #303643;
+  border-radius:20px;
+}
+
+.pay-card h3{
+  color:#e0bd68;
+}
+
+.qr{
+  width:220px;
+  height:220px;
+  margin:20px auto;
+  padding:10px;
+  background:#fff;
+  border-radius:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#111;
+  text-align:center;
+}
+
+.qr img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.pay-card p,
+.pay-card li{
+  color:#9da5b4;
+  font-size:13px;
+}
+
+/* GALLERY */
+
+.gallery{
+  background:#0d1018;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.gallery-item{
+  height:190px;
+  border-radius:17px;
+  border:1px solid #303642;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle,#3b2e17,transparent 50%),
+    #121620;
+}
+
+.gallery-item div{
+  font-size:45px;
+}
+
+.gallery-item h3{
+  color:#e0bd69;
+  margin-top:7px;
+}
+
+/* REVIEWS */
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.review{
+  padding:22px;
+  border:1px solid #303643;
+  border-radius:17px;
+  background:#111521;
+}
+
+.stars{
+  color:#e2bd66;
+}
+
+.review p{
+  color:#9da5b3;
+  font-size:13px;
+  margin:10px 0;
+}
+
+.review b{
+  font-size:13px;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#0d1018;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+
+.contact-card{
+  padding:22px;
+  border:1px solid #303642;
+  border-radius:17px;
+  background:#121722;
+  text-align:center;
+}
+
+.contact-card h3{
+  color:#dfbd68;
+}
+
+.contact-card p{
+  color:#9ba3b1;
+  margin-top:6px;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid #292e39;
+  text-align:center;
+  padding:35px 0;
+  color:#808897;
+  font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .hero-grid,
+  .about-grid,
+  .payment-grid{
+    grid-template-columns:1fr;
+  }
+
+  .package-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .staff-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .menu{
+    display:none;
+  }
+
+  .hero h1{
+    font-size:39px;
+  }
+
+  .service-grid,
+  .gallery-grid,
+  .review-grid,
+  .contact-grid,
+  .package-grid,
+  .staff-grid,
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+
+  .form-card{
+    padding:18px;
+  }
+
+  section{
+    padding:55px 0;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="container nav">
+
+<div class="brand">
+AYMALOKOR <span>BUSINESS</span>
+</div>
+
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#staff">Staff</a>
+<a href="#packages">Packages</a>
+<a href="#order">Registration</a>
+<a href="#contact">Contact</a>
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+PROFESSIONAL BUSINESS PORTAL
+</div>
+
+<h1>
+Grow Your Business
+With <span class="gold">Confidence.</span>
+</h1>
+
+<p>
+AYMALOKOR BUSINESS provides professional
+services, customer support, design solutions,
+sales & marketing and online business assistance
+from one trusted platform.
+</p>
+
+<div class="buttons">
+
+<a
+href="#order"
+class="btn btn-gold"
+>
+Register Now
+</a>
+
+<a
+href="#services"
+class="btn btn-dark"
+>
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="hero-logo">
+
+<div>
+
+<div class="hero-icon">
+✦
+</div>
+
+<h2>
+AYMALOKOR
+</h2>
+
+<p>
+BUSINESS SOLUTIONS
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+About Aymalokor Business
+</h2>
+
+<p>
+Professional service with a modern business approach
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="info-card">
+
+<h3>
+🏢 Our Business
+</h3>
+
+<p>
+AYMALOKOR BUSINESS is a professional
+service platform designed to connect
+customers with useful business and
+creative services.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+🎯 Our Mission
+</h3>
+
+<p>
+Our goal is to provide simple, professional
+and customer-friendly services while
+building long-term trust.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section
+id="services"
+class="about"
+>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our Services
+</h2>
+
+<p>
+Choose the service you need
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Design Department
+</h3>
+
+<p>
+Logo design, branding, graphics and
+creative design services.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+📞
+</div>
+
+<h3>
+Customer Service
+</h3>
+
+<p>
+Customer registration, support and
+business communication.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+📈
+</div>
+
+<h3>
+Sales & Marketing
+</h3>
+
+<p>
+Business promotion, customer reach
+and marketing support.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+💻
+</div>
+
+<h3>
+Online Services
+</h3>
+
+<p>
+Digital assistance and online business
+support services.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+📝
+</div>
+
+<h3>
+Form Services
+</h3>
+
+<p>
+Professional online form assistance
+and document support.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">
+🤝
+</div>
+
+<h3>
+Business Support
+</h3>
+
+<p>
+General business assistance and
+customer coordination.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- STAFF -->
+
+<section id="staff" class="staff">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our Team
+</h2>
+
+<p>
+Professional departments and staff management
+</p>
+
+</div>
+
+
+<div class="staff-grid">
+
+<div class="staff-card">
+
+<div class="avatar">
+M
+</div>
+
+<h3>
+Manager
+</h3>
+
+<p>
+Business Management
+</p>
+
+</div>
+
+
+<div class="staff-card">
+
+<div class="avatar">
+C
+</div>
+
+<h3>
+Customer Service
+</h3>
+
+<p>
+Customer Support
+</p>
+
+</div>
+
+
+<div class="staff-card">
+
+<div class="avatar">
+S
+</div>
+
+<h3>
+Sales & Marketing
+</h3>
+
+<p>
+Sales Department
+</p>
+
+</div>
+
+
+<div class="staff-card">
+
+<div class="avatar">
+D
+</div>
+
+<h3>
+Design Department
+</h3>
+
+<p>
+Creative Team
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PACKAGES -->
+
+<section id="packages">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Logo Design Packages
+</h2>
+
+<p>
+Premium design packages starting from ₹299
+</p>
+
+</div>
+
+
+<div class="package-grid">
+
+
+<div class="package">
+
+<h3>
+Basic
+</h3>
+
+<div class="price">
+₹299
+</div>
+
+<ul>
+<li>✓ 1 Logo Concept</li>
+<li>✓ PNG / JPG</li>
+<li>✓ Basic Revision</li>
+<li>✓ Standard Delivery</li>
+</ul>
+
+</div>
+
+
+<div class="package">
+
+<h3>
+Standard
+</h3>
+
+<div class="price">
+₹499
+</div>
+
+<ul>
+<li>✓ 2 Concepts</li>
+<li>✓ PNG / JPG</li>
+<li>✓ Transparent PNG</li>
+<li>✓ Revision Support</li>
+</ul>
+
+</div>
+
+
+<div class="package popular">
+
+<div class="badge-popular">
+MOST POPULAR
+</div>
+
+<h3>
+Premium
+</h3>
+
+<div class="price">
+₹799
+</div>
+
+<ul>
+<li>✓ 3 Concepts</li>
+<li>✓ Source File</li>
+<li>✓ Transparent PNG</li>
+<li>✓ Priority Support</li>
+</ul>
+
+</div>
+
+
+<div class="package">
+
+<h3>
+Business Pro
+</h3>
+
+<div class="price">
+₹1,499
+</div>
+
+<ul>
+<li>✓ 5 Concepts</li>
+<li>✓ Source File</li>
+<li>✓ Social Media Logo</li>
+<li>✓ Priority Delivery</li>
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CUSTOMER REGISTRATION -->
+
+<section
+id="order"
+class="form-section"
+>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+📝 Customer Registration
+</h2>
+
+<p>
+Fill the form and send your registration to WhatsApp
+</p>
+
+</div>
+
+
+<div class="form-card">
+
+<form id="customerForm">
+
+
+<div class="form-grid">
+
+
+<div>
+
+<label>
+Customer Name *
+</label>
+
+<input
+id="customerName"
+required
+placeholder="Full name"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Mobile Number *
+</label>
+
+<input
+id="mobile"
+type="tel"
+maxlength="10"
+inputmode="numeric"
+required
+placeholder="10 digit number"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Business / Brand Name
+</label>
+
+<input
+id="businessName"
+placeholder="Business name"
+>
+
+</div>
+
+
+<div>
+
+<label>
+Service *
+</label>
+
+<select id="service" required>
+
+<option value="">
+Select service
+</option>
+
+<option>
+Customer Service
+</option>
+
+<option>
+Sales & Marketing
+</option>
+
+<option>
+Design Department
+</option>
+
+<option>
+Online Services
+</option>
+
+<option>
+Form Service
+</option>
+
+<option>
+Business Support
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+Package
+</label>
+
+<select id="package">
+
+<option value="">
+Select package
+</option>
+
+<option>
+Basic - ₹299
+</option>
+
+<option>
+Standard - ₹499
+</option>
+
+<option>
+Premium - ₹799
+</option>
+
+<option>
+Business Pro - ₹1,499
+</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>
+Payment Method
+</label>
+
+<select id="paymentMethod">
+
+<option value="">
+Select method
+</option>
+
+<option>
+Online UPI / QR
+</option>
+
+<option>
+Offline Cash
+</option>
+
+</select>
+
+</div>
+
+
+<div class="full">
+
+<label>
+Full Address *
+</label>
+
+<textarea
+id="address"
+required
+placeholder="Enter address"
+></textarea>
+
+</div>
+
+
+<div class="full">
+
+<label>
+Additional Details
+</label>
+
+<textarea
+id="details"
+placeholder="Write your requirements"
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<div class="form-note">
+
+🔐 <b>Security:</b>
+We never ask for OTP, UPI PIN, ATM PIN,
+bank password or login password.
+
+</div>
+
+
+<button
+class="submit"
+type="submit"
+>
+📱 Submit Registration to WhatsApp
+</button>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PAYMENT -->
+
+<section
+class="payment"
+id="payment"
+>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+💳 Payment Options
+</h2>
+
+<p>
+Online & offline payment available
+</p>
+
+</div>
+
+
+<div class="payment-grid">
+
+
+<div class="pay-card">
+
+<h3>
+📲 Online Payment
+</h3>
+
+<div class="qr">
+
+<img
+src="fampay-qr.jpg"
+alt="Payment QR"
+onerror="
+this.style.display='none';
+this.parentElement.innerHTML=
+'<b>Upload fampay-qr.jpg</b>';
+"
+>
+
+</div>
+
+<p style="text-align:center;">
+
+UPI:
+<b style="color:#e0bd69;">
+9387628351@fam
+</b>
+
+</p>
+
+</div>
+
+
+<div class="pay-card">
+
+<h3>
+💵 Offline Payment
+</h3>
+
+<br>
+
+<ul>
+
+<li>✓ Cash Payment</li>
+
+<li>✓ Direct Payment</li>
+
+<li>✓ Local Orders</li>
+
+<li>✓ Payment Confirmation</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Our Work Categories
+</h2>
+
+<p>
+Professional creative work
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<div>
+<div>🎨</div>
+<h3>Logo Design</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<div>💼</div>
+<h3>Business Branding</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<div>📱</div>
+<h3>Social Media Design</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<div>🖥️</div>
+<h3>Website Design</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<div>📢</div>
+<h3>Marketing Design</h3>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<div>✨</div>
+<h3>Premium Creative</h3>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- REVIEWS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Customer Reviews
+</h2>
+
+<p>
+What our customers say
+</p>
+
+</div>
+
+
+<div class="review-grid">
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Professional service and good communication.”
+</p>
+
+<b>
+— Customer
+</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Very simple and easy ordering process.”
+</p>
+
+<b>
+— Customer
+</b>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Good support and creative service.”
+</p>
+
+<b>
+— Customer
+</b>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section
+id="contact"
+class="contact"
+>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+Get in touch with Aymalokor Business
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-card">
+
+<h3>
+📱 WhatsApp
+</h3>
+
+<p>
+9387628351
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+💳 UPI
+</h3>
+
+<p>
+9387628351@fam
+</p>
+
+</div>
+
+
+<div class="contact-card">
+
+<h3>
+📍 Location
+</h3>
+
+<p>
+Assam, India
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<b style="color:#e0bd69;">
+AYMALOKOR BUSINESS
+</b>
+
+<br>
+
+Professional Business & Creative Services
+
+<br><br>
+
+WhatsApp:
+9387628351
+
+<br><br>
+
+© 2026 Aymalokor Business. All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+const WHATSAPP =
+"919387628351";
+
+
+document
+.getElementById("customerForm")
+.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+
+const name =
+document
+.getElementById("customerName")
+.value.trim();
+
+
+const mobile =
+document
+.getElementById("mobile")
+.value.trim();
+
+
+const business =
+document
+.getElementById("businessName")
+.value.trim()
+|| "Not provided";
+
+
+const service =
+document
+.getElementById("service")
+.value;
+
+
+const pack =
+document
+.getElementById("package")
+.value
+|| "Not selected";
+
+
+const payment =
+document
+.getElementById("paymentMethod")
+.value
+|| "Not selected";
+
+
+const address =
+document
+.getElementById("address")
+.value.trim();
+
+
+const details =
+document
+.getElementById("details")
+.value.trim()
+|| "Not provided";
+
+
+if(
+!/^[0-9]{10}$/.test(mobile)
+){
+
+alert(
+"Please enter a valid 10 digit mobile number."
+);
+
+return;
+
+}
+
+
+const message =
+
+`*AYMALOKOR BUSINESS - NEW REGISTRATION*
+
+━━━━━━━━━━━━━━━━━━
+
+*Customer Name:* ${name}
+
+*Mobile:* ${mobile}
+
+*Business Name:* ${business}
+
+*Service:* ${service}
+
+*Package:* ${pack}
+
+*Payment Method:* ${payment}
+
+*Address:* ${address}
+
+*Additional Details:* ${details}
+
+━━━━━━━━━━━━━━━━━━
+
+Please contact me regarding my registration.
+
+*AYMALOKOR BUSINESS*`;
+
+
+const url =
+"https://wa.me/" +
+WHATSAPP +
+"?text=" +
+encodeURIComponent(message);
+
+
+window.open(
+url,
+"_blank"
+);
+
+});
+
+</script>
+
+
+</body>
+  </html>
